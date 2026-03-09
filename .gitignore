@@ -10,3 +10,4 @@ storage/qr/
 *.zip
 
 .DS_Store
+.claude/
