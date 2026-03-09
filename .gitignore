@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+storage/photo_library/
+storage/exports/
+storage/database/
+storage/logs/
+storage/qr/
+*.db
+*.zip
+
+.DS_Store

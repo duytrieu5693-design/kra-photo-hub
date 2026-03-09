@@ -1,0 +1,25 @@
+{
+  "name": "kra-photo-hub",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/server",
+    "apps/dashboard"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "dev": "concurrently \"npm run server:dev\" \"npm run dashboard:dev\"",
+    "build": "npm run server:build && npm run dashboard:build",
+    "start": "npm run server:start",
+    "server": "npm run server:dev",
+    "dashboard": "npm run dashboard:dev",
+    "server:dev": "npm run dev --workspace=apps/server",
+    "server:build": "npm run build --workspace=apps/server",
+    "server:start": "npm run start --workspace=apps/server",
+    "dashboard:dev": "npm run dev --workspace=apps/dashboard",
+    "dashboard:build": "npm run build --workspace=apps/dashboard"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
